@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Karakterszámlálós reg. form</title>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="form">
+        <form>
+            <div id="nameDiv">
+                <input type="text" id="name" placeholder="Név" onkeyup="charcountName(this.value)"><span id="charcount-name" class="span1"></span>
+            </div>
+            <div id="passDiv">
+                <input type="text" id="pass_1" placeholder="Jelszó" onkeyup="charcountPass1(this.value)"><span id="charcount-pass1" class="span1"></span>
+            </div>
+            <div>
+                <input type="text" id="pass_2" onchange="passEqual()" placeholder="Jelszó mégegyszer"><span id="charcount-pass2"><span id="passEqual"></span>
+            </div>
+        </form>
+        <div id="div-submit">
+            <input type="submit" onclick="validates()" value="Regisztrálás"><span id="sikeres"></span>
+        </div>
+    </div>
+    <span id="sikeres"></span>
+    <hr>
+</body>
+</html>
